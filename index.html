@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Application</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    
+
+    <!-- Bootstrap CSS-->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="all">
+ 
+    <link href="css/theme.css" rel="stylesheet" media="all">
+
+
+    <!-- Font Awesome -->
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.css"
+    rel="stylesheet"
+    />
+    
+    <!-- MDB -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.js"
+    ></script>
+
+    <style>
+      body{
+        background-color: #f3f6fb;
+      }
+        .container{
+            display: grid;
+  
+  
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  width: 100%;
+  border-radius: 10px;
+        }
+        .row{
+            background-color: white;
+            justify-content: space-around;
+           
+            
+        }
+        .box1{
+            background-color: white;
+            
+        }
+        .box2{
+            background-color: white;
+            
+        }
+        .box3{
+            background-color: white;
+            
+        }
+        .card-img-top1{
+          border-radius: 50%;
+          display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+          
+        }
+        .card{
+          text-align: center;
+          border-radius: 10px;
+          background-color: #f3f6fb;
+        }
+        .card-img-top{
+        border-radius: 50%;
+          
+  
+  margin-right: 10px;
+  width: 50px;
+    }
+  #menu{
+color: black;
+font-weight: 550;
+font-family: Arial, Helvetica, sans-serif;
+padding: 15px 15px;
+  }
+  
+  #badg{
+    color: black;
+    background-color: lightgray!important;
+    border-radius: 50%;
+  }
+  #badg2{
+    color: white;
+    background-color: rgb(209, 10, 10)!important;
+    border-radius: 50%;
+  }
+  #person{
+color: rgb(177, 177, 177);
+font-family: Arial, Helvetica, sans-serif;
+font-weight: 400;
+  }
+  #person1{
+    color: black;
+font-weight: 550;
+font-family: Arial, Helvetica, sans-serif;
+
+  }
+  #prsnbox{
+background-color: antiquewhite;
+border-radius: 10px;
+padding: 10px 10px 10px 20px;
+  }
+  #prsnbox1{
+background-color: white;
+border-radius: 10px;
+padding: 10px 10px 10px 20px;
+  }
+
+  /*Box2*/
+
+  #chat2 .form-control {
+border-color: transparent;
+}
+
+#chat2 .form-control:focus {
+border-color: transparent;
+box-shadow: inset 0px 0px 0px 1px transparent;
+}
+
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+#cont{
+  background-color: aquamarine;
+  height: 100%;
+}
+#box{
+  background-color: cadetblue;
+  height: 100%;
+}
+#box2{
+  background-color: rgb(91, 108, 109);
+  height: 100%;
+}
+#chat2{
+  background-color: #f3f6fb;
+  height: 100%;
+  
+}
+#chatt{
+background-color: #1a2339 !important;
+}
+
+#chatt2{
+background-color: white !important;
+}
+#chatt1{
+  height: 50px;
+  justify-content: center;
+  margin: 20px 0px 20px 0px;
+}
+
+#cared{
+  background-color: #f3f6fb;
+  height: 26%;
+  text-align: center;
+  border-radius: 10px;
+  margin-top: 20px;
+  padding-bottom: 50px;
+}
+
+@media screen and (max-width: 575px) {
+  #card-body2{
+    overflow: scroll;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  #cared{
+    background-color: #f3f6fb;
+  height: 30%;
+  text-align: center;
+  border-radius: 10px;
+  margin-top: 20px;
+  padding-bottom: 50px;
+  }
+}
+
+/*Box3*/
+.fs_18 {
+  font-size: 18px;
+}
+.fs_14 {
+  font-size: 14px;
+}
+.fs_16 {
+  font-size: 16px;
+}
+
+.designation {
+  font-size: 14px;
+  color: #8294a5;
+}
+.start_card {
+  background-color: #f5f9fc;
+  border: 1px solid #ebeff2;
+}
+.accordion-button:not(.collapsed) {
+  color: black;
+  background-color: white;
+  box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0
+    var(--bs-accordion-border-color);
+}
+.accordion-button:focus {
+  box-shadow: none;
+}
+.list-group button:hover {
+  background-color: #f2f6fc;
+}
+.center_pan {
+  background-color: #f2f6fc;
+  border: 1px solid #f7f9fc;
+  height: 100%;
+}
+.image-upload > input {
+  display: none;
+}
+.send_chat{
+  background-color: #18233B;
+}
+.hb {
+  padding: 25px;
+  border: 1px solid #abc6ff;
+  background-color: #abc6ff;
+}
+.right_card {
+  background-color: #f5f7fb;
+  border: 1px solid #f1f3f7;
+}
+.archive_btn {
+  border: 2px solid #618cf1;
+  color: #618cf1;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.archive_btn:hover {
+  color: #618cf1;
+}
+.fa-clock {
+  color: #1455e5;
+  background-color: #b4c8fe;
+  padding: 6px;
+}
+
+.info2{
+
+    padding: 10px;
+    margin: 2px;
+   
+}
+.Time{
+    background-color: #D8E4FB;
+}
+.Attended{
+    background-color: #E4F6F4;
+    color: #00B89C;
+    
+}
+.meetings{
+    background-color: #F7F3FF;
+    color: #6E5DBD;
+}
+.Rejected{
+    background-color: #FFF1E8;
+    color: #F45225;
+}
+.set_progress{
+  transform: rotate(90deg);
+}
+@media only screen and (max-width: 767px){
+.list-group-item img{
+    width: 14%;
+}
+}
+/* Tablets Media Query */
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    .accordion-body .list-group .list-group-item img{
+        width: 16%;
+    }
+    .accordion-body .list-group .list-group-item span{
+       margin-left: 25px !important;
+        font-size: 24px;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+       
+        <div class="row">
+
+          <!--Box 1-->
+
+          <div class="col-sm-3 box1">
+             <!--logo-->
+            <div style="margin-bottom: 30px;"><img src="img/logoo.png" alt=""></div>
+
+ <!--profile-->
+            <div class="card" style="box-shadow: none;">
+              <img style="margin-top: 20px;" src="img/profile.jpg" class="card-img-top1" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Bill Bradford <i class="fa fa-cog" aria-hidden="true"></i></h5>
+                <p class="card-text">Lead UX/UI Designer</p>
+                <span><i class="fa fa-toggle-on" style="color: #0f53f2;" aria-hidden="true"></i> Active </span>
+              
+            </div></div>
+
+ <!--Dropdown-->
+<div> <nav class="navbar-sidebar2">
+  <ul class="list-unstyled navbar__list">
+      <li class="active has-sub">
+          <a class="js-arrow" href="#" id="menu">
+              Active Conversations &nbsp;<span class="badge bg-secondary" id="badg">4</span>
+              <span class="arrow">
+                  <i style="margin-left: 50px; line-height:3.3;" class="fas fa-angle-down"></i>
+              </span>
+              <li>
+                  <a href="#" id="person1">
+                      <div id="prsnbox" style="background-color: #f3f6fb;"><div > <img src="img/person1.jpg" class="card-img-top" alt="...">Henry Boyd</div></div></a>
+              </li>
+              <li>
+                  <a href="#" id="person">
+                      <div id="prsnbox1"><div > <img src="img/person2.jpg" class="card-img-top" alt="...">Martha Curtis &nbsp;
+                      <span class="badge bg-secondary" id="badg2">2</span></div></div></a>
+              </li>
+              <li>
+                  <a href="#" id="person">
+                      <div id="prsnbox1"><div > <img src="img/person3.jpg" class="card-img-top" alt="...">Philip Tucker</div></div></a>
+              </li>
+              <li>
+                  <a href="#" id="person">
+                      <div id="prsnbox1"><div > <img src="img/person4.jpg" class="card-img-top" alt="...">Christine Reid</div></div></a>
+              </li>
+              <li>
+                  <a href="#" id="person">
+                      <div id="prsnbox1"><div > <img src="img/person5.jpg" class="card-img-top" alt="...">Jerry Guzman</div></div></a>
+              </li>
+              <li>
+                  <a href="#" id="person">
+                      <div id="prsnbox1"><div > <img src="img/person6.jpg" class="card-img-top" alt="...">Russell Williams</div></div></a>
+              </li>
+
+          </a>
+          </li>
+          </ul>
+          <ul class="list-unstyled navbar__list">
+              <li class="active has-sub">
+                  <a class="js-arrow" href="#" id="menu">
+                      Archieved Conversations &nbsp;<span class="badge bg-secondary" id="badg">7</span>
+                      <span class="arrow">
+                          <i style="margin-left: 75px; line-height:3.4;" class="fas fa-angle-down"></i>
+                      </span>
+                      </a>
+                      </li>
+                      </ul>
+          </nav>
+        </div>
+          </div>
+
+
+          <!--Box 2-->
+          
+          <div class="col-sm-5 box2"><div class="card" id="chat2" style="box-shadow: none;">
+           
+            <div class="card-body" id="card-body2" data-mdb-perfect-scrollbar="true" style="position: relative;  height: 400px">
+  
+
+
+              
+  
+             
+  
+              <div class="d-flex flex-col justify-content-end mb-4 pt-1" id="chatt1" >
+                <div>
+                  <p class="small p-2 me-3 mb-1 text-white rounded-3 bg-primary" id="chatt">Hi Henry!!</p>
+                  
+                  <p class="small me-3 mb-3 rounded-3 text-muted d-flex justify-content-end">9h ago</p>
+                </div>
+                <img src="img/profile.jpg"
+                  alt="avatar 1" style="width: 45px; height: 100%; border-radius: 50%;">
+              </div>
+  
+              <div class="d-flex flex-col justify-content-end mb-4 pt-1" id="chatt1"> 
+                <div>
+                  <p class="small p-2 me-3 mb-1 text-white rounded-3 bg-primary" id="chatt">How can I help you today ?</p>
+                  
+                  <p class="small me-3 mb-3 rounded-3 text-muted d-flex justify-content-end">9h ago</p>
+                </div>
+                <img src="img/profile.jpg"
+                  alt="avatar 1" style="width: 45px; height: 100%; border-radius: 50%;">
+              </div>
+  
+             
+  
+              <div class="d-flex flex-row justify-content-start">
+                <img src="img/person1.jpg"
+                  alt="avatar 1" style="width: 45px; height: 100%; border-radius: 50%;">
+                <div>
+                  <p class="small p-2 ms-3 mb-1 rounded-3" id="chatt2">Hey Bill, nice to meet you.!</p>
+                 
+                  <p class="small ms-3 mb-3 rounded-3 text-muted" style="text-align: left;">9h ago</p>
+
+                </div>
+              </div>
+
+              <div class="d-flex flex-row justify-content-start">
+                <img src="img/person1.jpg"
+                  alt="avatar 1" style="width: 45px; height: 100%; border-radius: 50%;">
+                <div>
+                  <p class="small p-2 ms-3 mb-1 rounded-3" id="chatt2">Hope you're doing fine.</p>
+                 
+                  <p class="small ms-3 mb-3 rounded-3 text-muted" style="text-align: left;">9h ago</p>
+
+                </div>
+              </div>
+
+
+              <div class="d-flex flex-row justify-content-end mb-4 pt-1" id="chatt1">
+                <div>
+                  <p class="small p-2 me-3 mb-1 text-white rounded-3 bg-primary" id="chatt">I'm good thanks for asking.</p>
+                  
+                  <p class="small me-3 mb-3 rounded-3 text-muted d-flex justify-content-end">9h ago</p>
+                </div>
+                <img src="img/profile.jpg"
+                  alt="avatar 1" style="width: 45px; height: 100%; border-radius: 50%;">
+              </div>
+
+
+
+              <div class="d-flex flex-row justify-content-start">
+                <img src="img/person1.jpg"
+                  alt="avatar 1" style="width: 45px; height: 100%; border-radius: 50%;">
+                <div>
+                  <p class="small p-2 ms-3 mb-1 rounded-3" id="chatt2">I am interested to know more about your prices and services you offer</p>
+                 
+                  <p class="small ms-3 mb-3 rounded-3 text-muted" style="text-align: left;">9h ago</p>
+
+                </div>
+              </div>
+
+
+
+              <div class="d-flex flex-row justify-content-end mb-4 pt-1" id="chatt1">
+                <div>
+                  <p class="small p-2 me-3 mb-1 text-white rounded-3 bg-primary" id="chatt">Sure, please check below link for more information http://mazepixel.com/portofolio</p>
+                  
+                  <p class="small me-3 mb-3 rounded-3 text-muted d-flex justify-content-end">9h ago</p>
+                </div>
+                <img src="img/profile.jpg"
+                  alt="avatar 1" style="width: 45px; height: 100%; border-radius: 50%;">
+              </div>
+
+
+              <div class="d-flex flex-row justify-content-start"  style="margin-top: 20px;" >
+                <img src="img/person1.jpg"
+                  alt="avatar 1" style="width: 45px; height: 100%; border-radius: 50%; margin-top: 30px;">
+                <div>
+                  <p class="small p-2 ms-3 mb-1 rounded-3" style="background-color: white; text-align: left; margin-top: 30px;">Awesome, will get in touch if there's anything unclear. Thanks for now!</p>
+                 
+                  <p class="small ms-3 mb-3 rounded-3 text-muted" style="text-align: left;">9h ago</p>
+
+                </div>
+              </div>
+
+
+              <div class="d-flex flex-row justify-content-start">
+                <img src="img/person1.jpg"
+                  alt="avatar 1" style="width: 45px; height: 100%; border-radius: 50%;">
+                <div>
+                  <p class="small p-2 ms-3 mb-1 rounded-3" id="chatt2">Have a great day!</p>
+                 
+                  <p class="small ms-3 mb-3 rounded-3 text-muted" style="text-align: left;">9h ago</p>
+
+                </div>
+              </div>
+
+
+              <div class="d-flex flex-row justify-content-end mb-4 pt-1" id="chatt1">
+                <div>
+                  <p class="small p-2 me-3 mb-1 text-white rounded-3 bg-primary" id="chatt">Thanks buddy, you too as well.</p>
+                  
+                  <p class="small me-3 mb-3 rounded-3 text-muted d-flex justify-content-end">9h ago</p>
+                </div>
+                <img src="img/profile.jpg"
+                  alt="avatar 1" style="width: 45px; height: 100%; border-radius: 50%;">
+              </div>
+
+
+  
+            </div>
+
+
+
+            
+            <div class="card-footer text-muted d-flex justify-content-start align-items-center p-3">
+              
+              <a class="ms-1 text-muted" href="#!"><i class="fas fa-paperclip"></i></a>
+
+             &nbsp; <input type="text" class="form-control form-control-lg" id="exampleFormControlInput1"
+                placeholder="Type message">
+
+                <a class="btn btn-primary btn-sm" style="background-color: #0f53f2; width: 150px; height: 45px; padding-top: 15px; margin-left: 15px;" href="#!" role="button"
+  
+                >Send <i class="fa fa-paper-plane copy-icon px-2" aria-hidden="true"></i></a>
+             
+            </div>
+          </div></div>
+
+
+          <!--Box3-->
+          <div class="col-sm-3 box3">
+            <div id="cared"><div >
+              <img class="card-img-top" src="img/person5.jpg" alt="Card image cap" style="width: 100px; margin-top: 10px;">
+              <div class="card-body">
+                <p class="card-title"  style="margin-top: 20px; text-align: left; margin-left: 20px;"><i class="fa-solid fa-envelope mt-1 my-icon"></i>&nbsp;&nbsp;</a>henryboyd@gmail.com</p>
+                <p class="card-text" style="text-align: left; margin-left: 20px;"><i class="fa-solid fa-user mt-1 my-icon"></i>&nbsp;&nbsp;</a>Henry Boyd</p>
+                <a href="#" class="btn btn-primary" style="background-color: white; color: #0f53f2; border: 1px solid #0f53f2;" >Archieve<i
+                  class="fa-solid fa-box-archive arc-icon px-2"></i></a></a>
+              </div>
+            </div></div>
+
+            
+            <div style="background-color: #f3f6fb;">
+        <div class="card right_card mt-4 rounded-4">
+
+          <div class="row text-center">
+              <div class="col-lg-6 col-md-6 p-2">
+
+                  <div class="d-flex align-items-center justify-content-center rounded-3 info2 Time">
+                      <i class="fa-regular fa-clock rounded-circle"></i>
+                      <div class="lh-1 ms-2">
+                          <h5 class="m-0">13h</h5>
+                          <p class="m-0 text-secondary">Time</p>
+                      </div>
+                  </div>
+
+              </div>
+              <div class="col-lg-6 col-md-6 p-2">
+
+                  <div class="d-flex align-items-center justify-content-center rounded-3 info2 Attended">
+                      <i class="fa-solid fa-user rounded-circle p-2"></i>
+                      <div class="lh-1 ms-2">
+                          <h5 class="m-0">188</h5>
+                          <p class="m-0 text-secondary">Attended</p>
+                      </div>
+                  </div>
+
+              </div>
+              <div class="col-lg-6 col-md-6 p-2">
+
+                  <div class="d-flex align-items-center justify-content-center rounded-3 info2 meetings">
+                      <i class="fa-solid fa-calendar-days rounded-circle"></i>
+                      <div class="lh-1 ms-2">
+                          <h5 class="m-0">199</h5>
+                          <p class="m-0 text-secondary">Meetings</p>
+                      </div>
+                  </div>
+
+              </div>
+              <div class="col-lg-6 col-md-6 p-2">
+
+                  <div class="d-flex align-items-center justify-content-center rounded-3 info2 Rejected">
+                      <i class="fa-solid fa-ban"></i>
+                      <div class="lh-1 ms-2">
+                          <h5 class="m-0">41</h5>
+                          <p class="m-0 text-secondary">Rejected</p>
+                      </div>
+                  </div>
+
+              </div>
+          </div>
+      </div>
+</div>
+
+
+            <div style="background-color: #f3f6fb; height: 18%; text-align: center; border-radius: 10px;"><div >
+              
+              <div class="card-body">
+               
+                <h5 class="card-title" style="margin-top: 15px; padding-top: 15px;" >Onboard Clients</h5>
+                <p class="card-text" style="margin-top: 10px;">Share the links with prospects and discuss.</p>
+                <a href="#" class="btn btn-primary" style="margin-bottom: 5px; background-color: #0f53f2;">Copy Link&nbsp;&nbsp;<i class="fas fa-paperclip"></i></a>
+              </div>
+
+
+
+              
+              
+              
+   
+</div></div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
